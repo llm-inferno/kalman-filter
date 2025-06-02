@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.ibm.com/modeling-analysis/kalman-filter/pkg/utils"
+	"github.com/llm-inferno/kalman-filter/pkg/utils"
 
 	"gonum.org/v1/gonum/mat"
 )

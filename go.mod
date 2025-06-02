@@ -1,4 +1,4 @@
-module github.ibm.com/modeling-analysis/kalman-filter
+module github.com/llm-inferno/kalman-filter
 
 go 1.23.2
 

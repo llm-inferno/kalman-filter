@@ -3,7 +3,7 @@ package utils
 import (
 	"math"
 
-	"github.ibm.com/modeling-analysis/kalman-filter/pkg/config"
+	"github.com/llm-inferno/kalman-filter/pkg/config"
 
 	"gonum.org/v1/gonum/mat"
 )

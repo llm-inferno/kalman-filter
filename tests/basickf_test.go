@@ -3,9 +3,9 @@ package tests
 import (
 	"testing"
 
-	"github.ibm.com/modeling-analysis/kalman-filter/pkg/utils"
+	"github.com/llm-inferno/kalman-filter/pkg/utils"
 
-	"github.ibm.com/modeling-analysis/kalman-filter/pkg/core"
+	"github.com/llm-inferno/kalman-filter/pkg/core"
 
 	"github.com/stretchr/testify/assert"
 	"gonum.org/v1/gonum/mat"
