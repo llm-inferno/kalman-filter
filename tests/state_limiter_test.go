@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/llm-inferno/kalman-filter/pkg/utils"
+	"kalman-filter/pkg/utils"
 
 	"gonum.org/v1/gonum/mat"
 )

@@ -2,9 +2,12 @@ module github.com/llm-inferno/kalman-filter
 
 go 1.23.2
 
+replace kalman-filter => ./
+
 require (
 	github.com/stretchr/testify v1.10.0
 	gonum.org/v1/gonum v0.15.1
+	kalman-filter v0.0.0-00010101000000-000000000000
 )
 
 require (

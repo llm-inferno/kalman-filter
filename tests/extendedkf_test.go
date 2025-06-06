@@ -3,8 +3,8 @@ package tests
 import (
 	"testing"
 
-	"github.com/llm-inferno/kalman-filter/pkg/core"
-	"github.com/llm-inferno/kalman-filter/pkg/utils"
+	"kalman-filter/pkg/core"
+	"kalman-filter/pkg/utils"
 
 	"github.com/stretchr/testify/assert"
 	"gonum.org/v1/gonum/mat"
