@@ -5,8 +5,8 @@ import (
 	"math"
 	"math/rand"
 
-	"kalman-filter/pkg/core"
-	"kalman-filter/pkg/utils"
+	"github.com/llm-inferno/kalman-filter/pkg/core"
+	"github.com/llm-inferno/kalman-filter/pkg/utils"
 
 	"gonum.org/v1/gonum/mat"
 )

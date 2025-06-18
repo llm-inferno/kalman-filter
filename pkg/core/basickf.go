@@ -3,7 +3,7 @@ package core
 import (
 	"errors"
 
-	"kalman-filter/pkg/utils"
+	"github.com/llm-inferno/kalman-filter/pkg/utils"
 
 	"gonum.org/v1/gonum/mat"
 )
