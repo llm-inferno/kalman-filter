@@ -18,7 +18,7 @@ func TransposeMatrix(m *mat.Dense) *mat.Dense {
 
 func EyeMatrix(size int) *mat.Dense {
 	I := mat.NewDense(size, size, nil)
-	for i := 0; i < size; i++ {
+	for i := range size {
 		I.Set(i, i, 1.0)
 	}
 	return I

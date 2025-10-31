@@ -15,7 +15,7 @@ func NewQMatrixCreator() *QMatrixCreator {
 func (q *QMatrixCreator) GetMatrix(stateChange []float64) *mat.Dense {
 	n := len(stateChange)
 	Q := mat.NewDense(n, n, nil)
-	for i := 0; i < n; i++ {
+	for i := range n {
 		Q.Set(i, i, math.Pow(stateChange[i], 2))
 	}
 	return Q

@@ -15,7 +15,7 @@ func NumericalJacobian(f func(*mat.VecDense) *mat.VecDense, x *mat.VecDense, out
 	// Define epsilon based on delta * |x|
 	delta := config.Delta // Load from config (e.g., 0.01)
 
-	for j := 0; j < n; j++ {
+	for j := range n {
 		epsilon := delta * math.Abs(x.AtVec(j))
 		if epsilon == 0 {
 			epsilon = delta // Use a small default epsilon if the component is zero
@@ -36,7 +36,7 @@ func NumericalJacobian(f func(*mat.VecDense) *mat.VecDense, x *mat.VecDense, out
 		fxBwd := f(xPerturbedBwd)
 
 		// Compute the partial derivative using symmetric difference
-		for i := 0; i < outputSize; i++ {
+		for i := range outputSize {
 			J.Set(i, j, (fxFwd.AtVec(i)-fxBwd.AtVec(i))/(2*epsilon))
 		}
 	}

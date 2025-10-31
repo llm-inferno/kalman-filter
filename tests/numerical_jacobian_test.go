@@ -49,7 +49,7 @@ func TestNumericalJacobian(t *testing.T) {
 	rows := gotOutput.RawMatrix().Rows
 	cols := gotOutput.RawMatrix().Cols
 
-	for i := 0; i < rows; i++ {
+	for i := range rows {
 		for j := 0; j < cols; j++ {
 			if math.Abs(expectedOutput.At(i, j)-gotOutput.At(i, j)) > tolerance {
 				t.Errorf("Mismatch at (%d, %d): got %f, expected %f", i, j, gotOutput.At(i, j), expectedOutput.At(i, j))

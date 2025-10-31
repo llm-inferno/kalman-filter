@@ -24,7 +24,7 @@ func (r *RMatrixCreator) GetMatrix(meanMeasure []float64) *mat.Dense {
 	n := len(meanMeasure)
 	R := mat.NewDense(n, n, nil)
 	factor := math.Pow(r.errorLevel/r.tPercentile, 2) / r.gamma
-	for i := 0; i < n; i++ {
+	for i := range n {
 		R.Set(i, i, factor*math.Pow(meanMeasure[i], 2))
 	}
 	return R
