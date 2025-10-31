@@ -133,6 +133,9 @@ func (ekf *ExtendedKalmanFilter) Update(z *mat.VecDense, R *mat.Dense) error {
 
 	// Compute innovation y_k = z_k - h(x_k|k-1)
 	hx := ekf.h(ekf.X)
+	if hx == nil {
+		return errors.New("measurement function returned nil")
+	}
 	ekf.Y.SubVec(z, hx)
 
 	// Compute measurement Jacobian H_k
@@ -246,7 +249,7 @@ func (ekf *ExtendedKalmanFilter) SethH(h func(*mat.VecDense) *mat.VecDense) erro
 
 	// Test input-output consistency
 	testOutput := h(ekf.X)
-	if testOutput.Len() != ekf.Zdim {
+	if testOutput == nil || testOutput.Len() != ekf.Zdim {
 		return errors.New("invalid measurement function: output dimension must match measurement dimension")
 	}
 	ekf.h = h
